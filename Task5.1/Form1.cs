@@ -9,22 +9,18 @@ namespace Task5._1
 
         public void BubbleSort(int[] numArray){
             if (numArray != null) {
-                bool swappedNum;
                 for (int i = 0; i < numArray.Length; i++) {
-                    swappedNum = false;
+
                     for (int j = 0; j < numArray.Length - i - 1; j++)
                     {
                         if (numArray[j] > numArray[j + 1]) { 
-                               
                             int temp = numArray[j];
                             numArray[j] = numArray[j + 1];
                             numArray[j + 1] = temp;
-                            swappedNum = true;
+                            
                         }
                     }
-                    if (!swappedNum) {
-                        break;
-                    }
+
                 }
             }
         }
