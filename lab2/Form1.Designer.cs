@@ -61,11 +61,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(45, 23);
+            label2.Location = new Point(215, 26);
             label2.Name = "label2";
-            label2.Size = new Size(447, 30);
+            label2.Size = new Size(112, 30);
             label2.TabIndex = 3;
-            label2.Text = "Factorial, Sum of Array, Fibonacci Calculator";
+            label2.Text = "Calculator";
             label2.Click += label2_Click;
             // 
             // lblResult
