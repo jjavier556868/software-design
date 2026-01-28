@@ -37,17 +37,6 @@
             lblSumResult = new Label();
             label1 = new Label();
             label3 = new Label();
-            label4 = new Label();
-            txtFibo = new TextBox();
-            btnCalcFibonacci = new Button();
-            lblFiboResult = new Label();
-            label5 = new Label();
-            txtBaseNum = new TextBox();
-            txtExpNum = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
-            btnCalcPower = new Button();
-            lblPowerResult = new Label();
             SuspendLayout();
             // 
             // txtInput
@@ -135,123 +124,11 @@
             label3.TabIndex = 10;
             label3.Text = "Get Sum of Array:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(58, 221);
-            label4.Name = "label4";
-            label4.Size = new Size(87, 15);
-            label4.TabIndex = 11;
-            label4.Text = "Find Fibonacci:";
-            // 
-            // txtFibo
-            // 
-            txtFibo.Location = new Point(151, 218);
-            txtFibo.Name = "txtFibo";
-            txtFibo.PlaceholderText = "Enter number here";
-            txtFibo.Size = new Size(232, 23);
-            txtFibo.TabIndex = 12;
-            // 
-            // btnCalcFibonacci
-            // 
-            btnCalcFibonacci.Location = new Point(401, 218);
-            btnCalcFibonacci.Name = "btnCalcFibonacci";
-            btnCalcFibonacci.Size = new Size(75, 23);
-            btnCalcFibonacci.TabIndex = 13;
-            btnCalcFibonacci.Text = "Calculate";
-            btnCalcFibonacci.UseVisualStyleBackColor = true;
-            btnCalcFibonacci.Click += btnCalcFibonacci_Click;
-            // 
-            // lblFiboResult
-            // 
-            lblFiboResult.AutoSize = true;
-            lblFiboResult.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFiboResult.Location = new Point(39, 253);
-            lblFiboResult.Name = "lblFiboResult";
-            lblFiboResult.Size = new Size(108, 15);
-            lblFiboResult.TabIndex = 14;
-            lblFiboResult.Text = "Fibonacci number:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label5.Location = new Point(20, 280);
-            label5.Name = "label5";
-            label5.Size = new Size(126, 21);
-            label5.TabIndex = 15;
-            label5.Text = "Power Recursion";
-            // 
-            // txtBaseNum
-            // 
-            txtBaseNum.Location = new Point(149, 311);
-            txtBaseNum.Name = "txtBaseNum";
-            txtBaseNum.PlaceholderText = "Enter base number here";
-            txtBaseNum.Size = new Size(234, 23);
-            txtBaseNum.TabIndex = 16;
-            // 
-            // txtExpNum
-            // 
-            txtExpNum.Location = new Point(149, 340);
-            txtExpNum.Name = "txtExpNum";
-            txtExpNum.PlaceholderText = "Enter exponent number here";
-            txtExpNum.Size = new Size(234, 23);
-            txtExpNum.TabIndex = 17;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(109, 314);
-            label6.Name = "label6";
-            label6.Size = new Size(34, 15);
-            label6.TabIndex = 18;
-            label6.Text = "Base:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(83, 343);
-            label7.Name = "label7";
-            label7.Size = new Size(60, 15);
-            label7.TabIndex = 19;
-            label7.Text = "Exponent:";
-            // 
-            // btnCalcPower
-            // 
-            btnCalcPower.Location = new Point(401, 311);
-            btnCalcPower.Name = "btnCalcPower";
-            btnCalcPower.Size = new Size(75, 52);
-            btnCalcPower.TabIndex = 20;
-            btnCalcPower.Text = "Calculate";
-            btnCalcPower.UseVisualStyleBackColor = true;
-            btnCalcPower.Click += btnCalcPower_Click;
-            // 
-            // lblPowerResult
-            // 
-            lblPowerResult.AutoSize = true;
-            lblPowerResult.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPowerResult.Location = new Point(80, 371);
-            lblPowerResult.Name = "lblPowerResult";
-            lblPowerResult.Size = new Size(65, 21);
-            lblPowerResult.TabIndex = 21;
-            lblPowerResult.Text = "Result: ";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(531, 424);
-            Controls.Add(lblPowerResult);
-            Controls.Add(btnCalcPower);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(txtExpNum);
-            Controls.Add(txtBaseNum);
-            Controls.Add(label5);
-            Controls.Add(lblFiboResult);
-            Controls.Add(btnCalcFibonacci);
-            Controls.Add(txtFibo);
-            Controls.Add(label4);
+            ClientSize = new Size(531, 254);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(lblSumResult);
@@ -262,7 +139,7 @@
             Controls.Add(label2);
             Controls.Add(txtInput);
             Name = "Form1";
-            Text = "Factorial, Sum of Array, Fibonacci, Power Calculator";
+            Text = "Factorial, Sum of Array Calculator";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -279,16 +156,5 @@
         private Label lblSumResult;
         private Label label1;
         private Label label3;
-        private Label label4;
-        private TextBox txtFibo;
-        private Button btnCalcFibonacci;
-        private Label lblFiboResult;
-        private Label label5;
-        private TextBox txtBaseNum;
-        private TextBox txtExpNum;
-        private Label label6;
-        private Label label7;
-        private Button btnCalcPower;
-        private Label lblPowerResult;
     }
 }
