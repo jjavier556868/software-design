@@ -54,6 +54,7 @@
             // 
             txtInput.Location = new Point(151, 74);
             txtInput.Name = "txtInput";
+            txtInput.PlaceholderText = "Enter number here";
             txtInput.Size = new Size(232, 23);
             txtInput.TabIndex = 0;
             // 
@@ -92,6 +93,7 @@
             // 
             txtArrayInput.Location = new Point(151, 148);
             txtArrayInput.Name = "txtArrayInput";
+            txtArrayInput.PlaceholderText = "Enter number separately using comma";
             txtArrayInput.Size = new Size(232, 23);
             txtArrayInput.TabIndex = 6;
             // 
@@ -146,6 +148,7 @@
             // 
             txtFibo.Location = new Point(151, 218);
             txtFibo.Name = "txtFibo";
+            txtFibo.PlaceholderText = "Enter number here";
             txtFibo.Size = new Size(232, 23);
             txtFibo.TabIndex = 12;
             // 
@@ -183,6 +186,7 @@
             // 
             txtBaseNum.Location = new Point(149, 311);
             txtBaseNum.Name = "txtBaseNum";
+            txtBaseNum.PlaceholderText = "Enter base number here";
             txtBaseNum.Size = new Size(234, 23);
             txtBaseNum.TabIndex = 16;
             // 
@@ -190,6 +194,7 @@
             // 
             txtExpNum.Location = new Point(149, 340);
             txtExpNum.Name = "txtExpNum";
+            txtExpNum.PlaceholderText = "Enter exponent number here";
             txtExpNum.Size = new Size(234, 23);
             txtExpNum.TabIndex = 17;
             // 
@@ -257,7 +262,7 @@
             Controls.Add(label2);
             Controls.Add(txtInput);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Factorial, Sum of Array, Fibonacci, Power Calculator";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
