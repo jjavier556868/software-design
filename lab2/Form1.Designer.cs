@@ -218,7 +218,7 @@
             // 
             // btnCalcPower
             // 
-            btnCalcPower.Location = new Point(401, 306);
+            btnCalcPower.Location = new Point(401, 311);
             btnCalcPower.Name = "btnCalcPower";
             btnCalcPower.Size = new Size(75, 52);
             btnCalcPower.TabIndex = 20;
