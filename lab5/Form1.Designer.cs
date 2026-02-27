@@ -38,25 +38,28 @@
             label3 = new Label();
             txtBookID = new TextBox();
             btnUpdateBook = new Button();
+            btnDeleteBook = new Button();
+            label4 = new Label();
+            txtSearchBook = new TextBox();
             SuspendLayout();
             // 
             // txtAuthorName
             // 
-            txtAuthorName.Location = new Point(39, 91);
+            txtAuthorName.Location = new Point(45, 93);
             txtAuthorName.Name = "txtAuthorName";
             txtAuthorName.Size = new Size(284, 23);
             txtAuthorName.TabIndex = 0;
             // 
             // txtBoxTitle
             // 
-            txtBoxTitle.Location = new Point(39, 146);
+            txtBoxTitle.Location = new Point(45, 148);
             txtBoxTitle.Name = "txtBoxTitle";
             txtBoxTitle.Size = new Size(284, 23);
             txtBoxTitle.TabIndex = 1;
             // 
             // btnAddBook
             // 
-            btnAddBook.Location = new Point(39, 192);
+            btnAddBook.Location = new Point(45, 194);
             btnAddBook.Name = "btnAddBook";
             btnAddBook.Size = new Size(284, 34);
             btnAddBook.TabIndex = 2;
@@ -68,15 +71,15 @@
             // 
             listBoxBooks.FormattingEnabled = true;
             listBoxBooks.ItemHeight = 15;
-            listBoxBooks.Location = new Point(351, 28);
+            listBoxBooks.Location = new Point(351, 88);
             listBoxBooks.Name = "listBoxBooks";
-            listBoxBooks.Size = new Size(282, 289);
+            listBoxBooks.Size = new Size(381, 259);
             listBoxBooks.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(39, 73);
+            label1.Location = new Point(45, 75);
             label1.Name = "label1";
             label1.Size = new Size(79, 15);
             label1.TabIndex = 4;
@@ -85,7 +88,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(39, 128);
+            label2.Location = new Point(45, 130);
             label2.Name = "label2";
             label2.Size = new Size(59, 15);
             label2.TabIndex = 5;
@@ -93,7 +96,7 @@
             // 
             // btnShowBooks
             // 
-            btnShowBooks.Location = new Point(39, 232);
+            btnShowBooks.Location = new Point(45, 234);
             btnShowBooks.Name = "btnShowBooks";
             btnShowBooks.Size = new Size(284, 34);
             btnShowBooks.TabIndex = 6;
@@ -104,7 +107,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(39, 28);
+            label3.Location = new Point(45, 30);
             label3.Name = "label3";
             label3.Size = new Size(18, 15);
             label3.TabIndex = 8;
@@ -112,14 +115,14 @@
             // 
             // txtBookID
             // 
-            txtBookID.Location = new Point(39, 46);
+            txtBookID.Location = new Point(45, 48);
             txtBookID.Name = "txtBookID";
             txtBookID.Size = new Size(284, 23);
             txtBookID.TabIndex = 7;
             // 
             // btnUpdateBook
             // 
-            btnUpdateBook.Location = new Point(39, 273);
+            btnUpdateBook.Location = new Point(45, 275);
             btnUpdateBook.Name = "btnUpdateBook";
             btnUpdateBook.Size = new Size(284, 34);
             btnUpdateBook.TabIndex = 9;
@@ -127,11 +130,41 @@
             btnUpdateBook.UseVisualStyleBackColor = true;
             btnUpdateBook.Click += btnUpdateBook_Click;
             // 
+            // btnDeleteBook
+            // 
+            btnDeleteBook.Location = new Point(45, 315);
+            btnDeleteBook.Name = "btnDeleteBook";
+            btnDeleteBook.Size = new Size(284, 34);
+            btnDeleteBook.TabIndex = 10;
+            btnDeleteBook.Text = "Delete Book";
+            btnDeleteBook.UseVisualStyleBackColor = true;
+            btnDeleteBook.Click += btnDeleteBook_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(351, 30);
+            label4.Name = "label4";
+            label4.Size = new Size(45, 15);
+            label4.TabIndex = 13;
+            label4.Text = "Search:";
+            // 
+            // txtSearchBook
+            // 
+            txtSearchBook.Location = new Point(351, 48);
+            txtSearchBook.Name = "txtSearchBook";
+            txtSearchBook.Size = new Size(381, 23);
+            txtSearchBook.TabIndex = 12;
+            txtSearchBook.TextChanged += txtSearchBook_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(674, 341);
+            ClientSize = new Size(780, 409);
+            Controls.Add(label4);
+            Controls.Add(txtSearchBook);
+            Controls.Add(btnDeleteBook);
             Controls.Add(btnUpdateBook);
             Controls.Add(label3);
             Controls.Add(txtBookID);
@@ -160,5 +193,8 @@
         private Label label3;
         private TextBox txtBookID;
         private Button btnUpdateBook;
+        private Button btnDeleteBook;
+        private Label label4;
+        private TextBox txtSearchBook;
     }
 }

@@ -82,5 +82,56 @@ namespace lab5
             UpdateBookAndAuthor(bookId, txtBoxTitle.Text, txtAuthorName.Text);
             MessageBox.Show("Book and Author updated successfully!");
         }
+
+        public void DeleteBookAndAuthor(int bookId)
+        {
+            using (var context = new BookstoreContextClass())
+            {
+                var book = context.Books.Include(b => b.Author).FirstOrDefault(b => b.BookID == bookId);
+                if (book != null)
+                {
+                    context.Authors.Remove(book.Author);
+                    context.Books.Remove(book);
+                    context.SaveChanges();
+                }
+            }
+        }
+        private void btnDeleteBook_Click(object sender, EventArgs e)
+        { 
+            int bookId;
+            if (int.TryParse(txtBookID.Text, out bookId))
+            {
+                DeleteBookAndAuthor(bookId);
+                MessageBox.Show("Book and Author deleted successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Invalid Book ID. Please enter a valid number.");
+            }
+        }
+
+        public void SearchBooksByTitle(string searchTerm)
+        {
+            using (var context = new BookstoreContextClass())
+            {
+                var books = context.Books
+                    .Where(b => b.Title.Contains(searchTerm))
+                    .Include(b => b.Author)
+                    .Select(b => $"{b.Title} by {b.Author.Name}")
+                    .ToList();
+                listBoxBooks.DataSource = books;
+            }
+        }
+        private void txtSearchBook_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtSearchBook.Text))
+            {
+                SearchBooksByTitle(txtSearchBook.Text);
+            }
+            else
+            {
+                listBoxBooks.DataSource = GetBooksByAuthors();
+            }
+            }
     }
 }
